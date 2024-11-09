@@ -1,0 +1,22 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+model Order {
+    id           String   @id @default(uuid())
+    customerName String
+    orderAmount  Float
+    status       String
+    items        Json
+    createdAt    DateTime @default(now())
+
+    @@index([createdAt, id])
+    @@index([orderAmount, id])
+    @@index([status, id])
+    @@index([customerName, id])
+}
