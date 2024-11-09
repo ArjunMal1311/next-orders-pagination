@@ -11,7 +11,7 @@ export default function OrdersPage() {
         <div className="mb-8 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Package className="h-8 w-8 text-blue-500" />
-            <h1 className="text-3xl font-bold text-white">Orders Dashboard</h1>
+            <h1 className="text-3xl font-bold text-white">Orders Dashboard (scroll down for more records)</h1>
           </div>
         </div>
 
